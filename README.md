@@ -15,7 +15,7 @@
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
-- [Arquitetura](#-arquitetura)
+- [Arquitetura](#arquitetura)
 - [Como Rodar Localmente](#-como-rodar-localmente)
 - [Rotas](#-rotas)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
@@ -61,7 +61,7 @@ Swagger (local):
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 Organização por responsabilidade:
 
 - **Controllers/**  
@@ -92,7 +92,7 @@ Na raiz do repositório:
 cd backend/CadastroApiEF/CadastroApi
 dotnet restore
 dotnet run
-
+```
 A aplicação sobe em:
 - `Now listening on: http://localhost:5154`
 
@@ -145,6 +145,7 @@ CRUD-USUARIOS-EF-INMEMORY/
 ├─ LICENSE
 └─ README.md
 
+```
 ---
 
 ## 🧪 Testes
