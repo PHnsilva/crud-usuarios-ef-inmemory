@@ -3,6 +3,7 @@
 ---
 
 ## 🚧 Status do Projeto
+
 ![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-ASP.NET%20Core-239120?style=for-the-badge&logo=csharp&logoColor=white)
 ![EF Core](https://img.shields.io/badge/EF%20Core-InMemory-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
@@ -12,6 +13,7 @@
 ---
 
 ## 📚 Índice
+
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
@@ -25,9 +27,11 @@
 ---
 
 ## 📝 Sobre o Projeto
+
 API REST desenvolvida em **C# / ASP.NET Core (.NET 8)** para **cadastro de usuários** com persistência em **Entity Framework Core + InMemoryDatabase**.
 
 Campos cadastrados:
+
 - Nome
 - E-mail (**chave do recurso**)
 - Senha
@@ -36,12 +40,16 @@ Campos cadastrados:
 - Idade
 - Sexo
 
+O `Program.cs` cria um usuário de exemplo a cada inicialização. Não há autenticação ou autorização; a entidade de usuário, incluindo `Senha`, é devolvida pelas operações de consulta. O exemplo é acadêmico e deve usar dados fictícios. Não existe projeto de testes automatizados nesta base.
+
 Swagger (local):
+
 - `http://localhost:5154/swagger`
 
 ---
 
 ## ✨ Funcionalidades
+
 - Criar usuário (**POST**)
 - Listar todos os usuários (**GET**)
 - Buscar usuário por e-mail (**GET**)
@@ -53,6 +61,7 @@ Swagger (local):
 ---
 
 ## 🛠 Tecnologias
+
 - **.NET 8**
 - **ASP.NET Core Web API**
 - **Entity Framework Core**
@@ -62,6 +71,7 @@ Swagger (local):
 ---
 
 ## Arquitetura
+
 Organização por responsabilidade:
 
 - **Controllers/**  
@@ -83,20 +93,26 @@ Organização por responsabilidade:
 ## 🔧 Como Rodar Localmente
 
 ### Pré-requisitos
+
 - **.NET SDK 8**
 
 ### Rodar a API
-Na raiz do repositório:
+
+A partir de um clone limpo:
 
 ```bash
-cd backend/CadastroApiEF/CadastroApi
+git clone https://github.com/PHnsilva/crud-usuarios-ef-inmemory.git
+cd crud-usuarios-ef-inmemory/backend/CadastroApiEF/CadastroApi
 dotnet restore
 dotnet run
 ```
+
 A aplicação sobe em:
+
 - `Now listening on: http://localhost:5154`
 
 Acesse o Swagger:
+
 - `http://localhost:5154/swagger`
 
 ---
@@ -104,9 +120,11 @@ Acesse o Swagger:
 ## 🧭 Rotas
 
 Base:
+
 - `/api/Usuarios`
 
 Endpoints:
+
 - **POST** `/api/Usuarios` → cria usuário
 - **GET** `/api/Usuarios` → lista todos
 - **GET** `/api/Usuarios/{email}` → busca por e-mail
@@ -139,19 +157,28 @@ CRUD-USUARIOS-EF-INMEMORY/
 │  │     ├─ CadastroApi.http
 │  │     ├─ appsettings.json
 │  │     └─ appsettings.Development.json
-│  └─ testes_swagger/
+│  └─ testes_Swagger/
 │     └─ testes_Swagger.pdf
 ├─ .gitignore
 ├─ LICENSE
 └─ README.md
 
 ```
+
 ---
 
 ## 🧪 Testes
+
 Os testes do CRUD foram executados via **Swagger UI** e documentados em PDF:
 
-- `backend/testes_swagger/testes_Swagger.pdf`
+- [Relatório de testes manuais](backend/testes_Swagger/testes_Swagger.pdf). Esse artefato registra uma execução anterior, sem comprovar o estado atual.
+
+Para compilar, execute `dotnet build` na pasta `backend/CadastroApiEF/CadastroApi`. Para conferir o CRUD manualmente, use dados fictícios e verifique 201 na criação, 409 para e-mail duplicado, 404 para recurso ausente e 204 na exclusão. O provider InMemory não reproduz todas as restrições de um banco relacional.
+
+## Contribuição
+
+Abra uma branch e um pull request com a mudança e sua validação. Preserve o e-mail como chave e informe qualquer alteração no contrato HTTP.
 
 ## 📄 Licença
-Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE`.
+
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE).
