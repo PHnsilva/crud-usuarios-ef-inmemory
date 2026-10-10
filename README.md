@@ -4,6 +4,10 @@
 
 ## 🚧 Status do Projeto
 
+Projeto acadêmico **concluído no escopo de CRUD de usuários com EF Core InMemory**. A implementação e as evidências ficam disponíveis para consulta e estudo; a persistência temporária e as limitações do exercício estão descritas abaixo.
+
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge)
+
 ![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-ASP.NET%20Core-239120?style=for-the-badge&logo=csharp&logoColor=white)
 ![EF Core](https://img.shields.io/badge/EF%20Core-InMemory-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
